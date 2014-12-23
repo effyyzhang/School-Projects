@@ -1,0 +1,13 @@
+// Create varriables for the welcome message
+var greeting = 'Hello';
+var name = 'Effy';
+var message = ',Check out your order:';
+
+// Concatenate the three variables above to create the welcome message
+var welcome = greeting + name + message;
+
+//Get tge element that has an id of greeting
+var el = document.getElementById('greeting');
+
+//Replace the content of the element with the personalized welcome message 
+el.textContent = welcome;  
