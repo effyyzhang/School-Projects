@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Face++ JavaScript SDK</title>
+  </head>
+  <body>
+    <pre id="response">Loading...</pre>
+    <script type="text/javascript" src="facepp-sdk.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        var api = new FacePP('0ef14fa726ce34d820c5a44e57fef470', '4Y9YXOMSDvqu1Ompn9NSpNwWQFHs1hYD');
+        api.request('detection/detect', {
+          url: 'http://img.taopic.com/uploads/allimg/110406/2981-1104061PP018.jpg'
+        }, function(err, result) {
+          if (err) {
+            // TODO handle error
+            return;
+          }
+          // TODO use result
+          var smiling_value =  JSON.stringify(result.face[0].attribute.smiling.value, null, 2);
+
+          if(smiling_value <= 50){document.getElementById('response').innerHTML = "false";
+        }else if(smiling_value > 50){document.getElementById('response').innerHTML = "ture";  
+        }else{document.getElementById('response').innerHTML = "ture";
+        }
+
+          
+        });
+      })();
+    </script>
+  </body>
+</html>
