@@ -1,0 +1,193 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'request' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json web-api-code-example@0.0.1 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'request@~2.34.0', null ]
+7 verbose cache add name=undefined spec="request@~2.34.0" args=["request@~2.34.0",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'request@~2.34.0',
+8 verbose parsed url   path: 'request@~2.34.0',
+8 verbose parsed url   href: 'request@~2.34.0' }
+9 verbose cache add name="request" spec="~2.34.0" args=["request","~2.34.0"]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: '~2.34.0',
+10 verbose parsed url   path: '~2.34.0',
+10 verbose parsed url   href: '~2.34.0' }
+11 verbose addNamed [ 'request', '~2.34.0' ]
+12 verbose addNamed [ null, '>=2.34.0-0 <2.35.0-0' ]
+13 silly lockFile 1fb009df-request-2-34-0 request@~2.34.0
+14 verbose lock request@~2.34.0 /Users/effyzhang/.npm/1fb009df-request-2-34-0.lock
+15 silly addNameRange { name: 'request',
+15 silly addNameRange   range: '>=2.34.0-0 <2.35.0-0',
+15 silly addNameRange   hasData: false }
+16 verbose request where is /request
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id fdf1014cfe078f7a
+19 verbose url raw /request
+20 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+21 verbose url resolved https://registry.npmjs.org/request
+22 verbose request where is https://registry.npmjs.org/request
+23 info trying registry request attempt 1 at 20:43:13
+24 verbose etag "EW3TE5W47AY8MIPFCOY80NV9J"
+25 http GET https://registry.npmjs.org/request
+26 http 304 https://registry.npmjs.org/request
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Fri, 09 Jan 2015 12:43:13 GMT',
+27 silly registry.get     server: 'Apache',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'last-modified': 'Fri, 09 Jan 2015 12:42:55 GMT',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     etag: '"EW3TE5W47AY8MIPFCOY80NV9J"',
+27 silly registry.get     age: '31',
+27 silly registry.get     'x-served-by': 'cache-ty67-TYO',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '2',
+27 silly registry.get     'x-timer': 'S1420807393.914451,VS0,VE0',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'content-length': '0',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 verbose etag https://registry.npmjs.org/request from cache
+29 silly addNameRange number 2 { name: 'request', range: '>=2.34.0-0 <2.35.0-0', hasData: true }
+30 silly addNameRange versions [ 'request',
+30 silly addNameRange   [ '0.10.0',
+30 silly addNameRange     '0.8.3',
+30 silly addNameRange     '0.9.0',
+30 silly addNameRange     '0.9.1',
+30 silly addNameRange     '0.9.5',
+30 silly addNameRange     '1.0.0',
+30 silly addNameRange     '1.1.0',
+30 silly addNameRange     '1.1.1',
+30 silly addNameRange     '1.2.0',
+30 silly addNameRange     '1.9.0',
+30 silly addNameRange     '1.9.1',
+30 silly addNameRange     '1.9.2',
+30 silly addNameRange     '1.9.3',
+30 silly addNameRange     '1.9.5',
+30 silly addNameRange     '1.9.7',
+30 silly addNameRange     '1.9.8',
+30 silly addNameRange     '1.9.9',
+30 silly addNameRange     '2.0.0',
+30 silly addNameRange     '2.0.1',
+30 silly addNameRange     '2.0.2',
+30 silly addNameRange     '2.0.3',
+30 silly addNameRange     '2.0.4',
+30 silly addNameRange     '2.0.5',
+30 silly addNameRange     '2.1.0',
+30 silly addNameRange     '2.1.1',
+30 silly addNameRange     '2.2.0',
+30 silly addNameRange     '2.2.5',
+30 silly addNameRange     '2.2.6',
+30 silly addNameRange     '2.2.9',
+30 silly addNameRange     '2.9.0',
+30 silly addNameRange     '2.9.1',
+30 silly addNameRange     '2.9.2',
+30 silly addNameRange     '2.9.3',
+30 silly addNameRange     '2.9.100',
+30 silly addNameRange     '2.9.150',
+30 silly addNameRange     '2.9.151',
+30 silly addNameRange     '2.9.152',
+30 silly addNameRange     '2.9.153',
+30 silly addNameRange     '2.9.200',
+30 silly addNameRange     '2.9.201',
+30 silly addNameRange     '2.9.202',
+30 silly addNameRange     '2.9.203',
+30 silly addNameRange     '2.10.0',
+30 silly addNameRange     '2.11.0',
+30 silly addNameRange     '2.11.1',
+30 silly addNameRange     '2.11.2',
+30 silly addNameRange     '2.11.3',
+30 silly addNameRange     '2.11.4',
+30 silly addNameRange     '2.12.0',
+30 silly addNameRange     '2.14.0',
+30 silly addNameRange     '2.16.0',
+30 silly addNameRange     '2.16.2',
+30 silly addNameRange     '2.16.4',
+30 silly addNameRange     '2.16.6',
+30 silly addNameRange     '2.18.0',
+30 silly addNameRange     '2.19.0',
+30 silly addNameRange     '2.20.0',
+30 silly addNameRange     '2.21.0',
+30 silly addNameRange     '2.22.0',
+30 silly addNameRange     '2.23.0',
+30 silly addNameRange     '2.24.0',
+30 silly addNameRange     '2.25.0',
+30 silly addNameRange     '2.26.0',
+30 silly addNameRange     '2.27.0',
+30 silly addNameRange     '2.28.0',
+30 silly addNameRange     '2.29.0',
+30 silly addNameRange     '2.30.0',
+30 silly addNameRange     '2.31.0',
+30 silly addNameRange     '2.32.0',
+30 silly addNameRange     '2.33.0',
+30 silly addNameRange     '2.34.0',
+30 silly addNameRange     '2.35.0',
+30 silly addNameRange     '2.36.0',
+30 silly addNameRange     '2.37.0',
+30 silly addNameRange     '2.38.0',
+30 silly addNameRange     '2.39.0',
+30 silly addNameRange     '2.40.0',
+30 silly addNameRange     '2.41.0',
+30 silly addNameRange     '2.42.0',
+30 silly addNameRange     '2.43.0',
+30 silly addNameRange     '2.44.0',
+30 silly addNameRange     '2.45.0',
+30 silly addNameRange     '2.46.0',
+30 silly addNameRange     '2.47.0',
+30 silly addNameRange     '2.48.0',
+30 silly addNameRange     '2.49.0',
+30 silly addNameRange     '2.50.0',
+30 silly addNameRange     '2.51.0' ] ]
+31 verbose addNamed [ 'request', '2.34.0' ]
+32 verbose addNamed [ '2.34.0', '2.34.0' ]
+33 silly lockFile a8edf972-request-2-34-0 request@2.34.0
+34 verbose lock request@2.34.0 /Users/effyzhang/.npm/a8edf972-request-2-34-0.lock
+35 silly lockFile 1b2f62ce-s-org-request-request-2-34-0-tgz https://registry.npmjs.org/request/-/request-2.34.0.tgz
+36 verbose lock https://registry.npmjs.org/request/-/request-2.34.0.tgz /Users/effyzhang/.npm/1b2f62ce-s-org-request-request-2-34-0-tgz.lock
+37 verbose addRemoteTarball [ 'https://registry.npmjs.org/request/-/request-2.34.0.tgz',
+37 verbose addRemoteTarball   'b5d8b9526add4a2d4629f4d417124573996445ae' ]
+38 info retry fetch attempt 1 at 20:43:14
+39 verbose fetch to= /var/folders/1d/8cmmrqy5609cjy0_6klv0klc0000gn/T/npm-55636-STkegQfR/registry.npmjs.org/request/-/request-2.34.0.tgz
+40 http GET https://registry.npmjs.org/request/-/request-2.34.0.tgz
+41 http 200 https://registry.npmjs.org/request/-/request-2.34.0.tgz
+42 silly lockFile 1b2f62ce-s-org-request-request-2-34-0-tgz https://registry.npmjs.org/request/-/request-2.34.0.tgz
+43 silly lockFile 1b2f62ce-s-org-request-request-2-34-0-tgz https://registry.npmjs.org/request/-/request-2.34.0.tgz
+44 silly lockFile a8edf972-request-2-34-0 request@2.34.0
+45 silly lockFile a8edf972-request-2-34-0 request@2.34.0
+46 silly lockFile 1fb009df-request-2-34-0 request@~2.34.0
+47 silly lockFile 1fb009df-request-2-34-0 request@~2.34.0
+48 error Error: EACCES, mkdir '/Users/effyzhang/.npm/request/2.34.0'
+48 error  { [Error: EACCES, mkdir '/Users/effyzhang/.npm/request/2.34.0']
+48 error   errno: 3,
+48 error   code: 'EACCES',
+48 error   path: '/Users/effyzhang/.npm/request/2.34.0',
+48 error   parent: 'web-api-code-example' }
+49 error Please try running this command again as root/Administrator.
+50 error System Darwin 14.0.0
+51 error command "node" "/usr/local/bin/npm" "install" "request"
+52 error cwd /Applications/MAMP/htdocs/web-api-auth-examples-master/authorization_code
+53 error node -v v0.10.33
+54 error npm -v 1.4.28
+55 error path /Users/effyzhang/.npm/request/2.34.0
+56 error code EACCES
+57 error errno 3
+58 error stack Error: EACCES, mkdir '/Users/effyzhang/.npm/request/2.34.0'
+59 verbose exit [ 3, true ]
