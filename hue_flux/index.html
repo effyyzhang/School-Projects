@@ -1,86 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" >
-	<title>Hue_flux</title>
+	<title>F.lux the Hue</title>
 </head>
 <body>
- <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     <script src="js/huejs.js"></script>
-
     <script src="js/flux.js"></script>
 
-<div class="row main">
-    <h1>Hue Flux</h1>
-</div>
+    <div class="screen" class="gradient">
+    	<div class="status" >
+        <div class="status_bar">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="-340 -465 750 46.9" enable-background="new -340 -465 750 46.9" xml:space="preserve">
+                    <rect x="-341" y="-465" fill="none" width="750" height="46.9"/>
+                    <text transform="matrix(1 0 0 1 259.3798 -430.5287)" font-family="'HelveticaNeue'" font-size="26.9531">100%</text>
+                    <path opacity="0.5" d="M250.1-433.7l-7.8-7.2l7.3-6.9l-10.2-9v13.2l-6.8-6.3l-1.6,1.7l7.8,7.2l-7.8,7.4l1.6,1.7l6.8-6.4v13.3
+                        L250.1-433.7z M241.7-429.8v-8.4l4.8,4.4L241.7-429.8z M241.7-451.6l4.4,3.9l-4.4,4.1V-451.6z"/>
+                    <g>
+                        <path d="M-232.2-441.2l2.4,2.6c2.1-1.9,4.7-2.9,7.5-2.9c2.8,0,5.5,1,7.5,2.9l2.4-2.6c-2.7-2.5-6.2-3.9-9.9-3.9
+                            C-226-445-229.5-443.7-232.2-441.2z"/>
+                        <path d="M-227.1-435.5l4.7,5.2l4.7-5.2C-220.3-438-224.4-438-227.1-435.5z"/>
+                        <path d="M-222.3-452.1c-5.5,0-10.7,2.1-14.7,5.8l2.4,2.6c3.4-3.1,7.7-4.8,12.3-4.8c4.6,0,8.9,1.7,12.3,4.8l2.4-2.6
+                            C-211.7-450-216.8-452.1-222.3-452.1z"/>
+                    </g>
+                    <g>
+                        <circle cx="-318.9" cy="-440" r="7"/>
+                        <path d="M-302.5-447c-3.9,0-7,3.1-7,7c0,3.9,3.1,7,7,7c3.9,0,7-3.1,7-7C-295.5-443.9-298.6-447-302.5-447z"/>
+                        <path d="M-286.1-447c-3.9,0-7,3.1-7,7c0,3.9,3.1,7,7,7c3.9,0,7-3.1,7-7C-279.1-443.9-282.2-447-286.1-447z"/>
+                        <path d="M-269.7-447c-3.9,0-7,3.1-7,7c0,3.9,3.1,7,7,7c3.9,0,7-3.1,7-7C-262.7-443.9-265.8-447-269.7-447z"/>
+                        <path d="M-253.3-447c-3.9,0-7,3.1-7,7c0,3.9,3.1,7,7,7s7-3.1,7-7C-246.3-443.9-249.4-447-253.3-447z M-253.3-434.1
+                            c-3.2,0-5.9-2.6-5.9-5.9c0-3.2,2.6-5.9,5.9-5.9c3.2,0,5.9,2.6,5.9,5.9C-247.4-436.8-250.1-434.1-253.3-434.1z"/>
+                    </g>
+                    <g>
+                        <path d="M389.3-450.9c0.7,0,1.2,0.5,1.2,1.2v17.5c0,0.7-0.5,1.2-1.2,1.2h-46.8c-0.7,0-1.2-0.5-1.2-1.2v-17.5c0-0.7,0.5-1.2,1.2-1.2
+                            H389.3 M389.3-452.1h-46.8c-1.3,0-2.4,1.1-2.4,2.4v17.5c0,1.3,1.1,2.4,2.4,2.4h46.8c1.3,0,2.4-1.1,2.4-2.4v-17.5
+                            C391.6-451,390.6-452.1,389.3-452.1L389.3-452.1z"/>
+                        <path d="M389.3-433.3c0,0.6-0.5,1.2-1.2,1.2h-44.5c-0.6,0-1.2-0.5-1.2-1.2v-15.2c0-0.6,0.5-1.2,1.2-1.2h44.5c0.6,0,1.2,0.5,1.2,1.2
+                            V-433.3z"/>
+                        <path d="M392.8-445.8v9.4c2.6,0,4.7-2.1,4.7-4.7C397.5-443.7,395.4-445.8,392.8-445.8z"/>
+                    </g>
+            </svg>
+        </div>
+<!--     		<img src="img/status_bar.svg" alt="status">
+ -->            <div class="time"><h3>12:00PM</h3></div> 
+    	</div>
+    	<nav>
+            <h1>F.lux the Hue</h1>
+            <div class="menu_icon">
+                <svg version="1.1" id="icon1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M65,40H5c-2.8,0-5-2.2-5-5s2.2-5,5-5h60c2.8,0,5,2.2,5,5S67.8,40,65,40z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M65,64H5c-2.8,0-5-2.2-5-5s2.2-5,5-5h60c2.8,0,5,2.2,5,5S67.8,64,65,64z"/>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path d="M65,16H5c-2.8,0-5-2.2-5-5s2.2-5,5-5h60c2.8,0,5,2.2,5,5S67.8,16,65,16z"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            
+        </nav>
+        <main>
+            <div class="left">
+                <img src="control_bar.png" alt="schedule" >
+            </div>
+            <div class="switch" >
+            <button type="button" id="btn_on" class="hidden" >ON</button>
+            <button type="button" id="btn_flux" class="visible" >F.LUX</button>
+            <button type="button" id="btn_off" class="hidden">OFF</button>
+                <div class="circle">
+                    <div class="icons">
+                        <div class="icon_off">
+                            <svg version="1.1" id="icon_off" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+                                <g>
+                                    <path fill="#FFAA3A" d="M53.5,36.4h-37c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h37c0.8,0,1.5,0.7,1.5,1.5S54.3,36.4,53.5,36.4z"/>
+                                </g>
+                            </svg>                            
+                        </div>
+                        <div class="icon_flux">
+                            <svg version="1.1" id="icon_flux" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 70 35" enable-background="new 0 0 70 70" xml:space="preserve">
+                                <g>
+                                    <path fill="#FFAA3A" d="M35,17.9c9.5,0,17.1,7.7,17.1,17.1c0,9.5-7.7,17.1-17.1,17.1c-9.5,0-17.1-7.7-17.1-17.1
+                                        C17.9,25.5,25.5,17.9,35,17.9 M35,14.9c-11.1,0-20.1,9-20.1,20.1s9,20.1,20.1,20.1s20.1-9,20.1-20.1S46.1,14.9,35,14.9L35,14.9z"/>
+                                </g>
+                                <g>
+                                    <path fill="#FFAA3A" d="M35,10.5c-0.8,0-1.5-0.7-1.5-1.5V1.5C33.5,0.7,34.2,0,35,0s1.5,0.7,1.5,1.5V9C36.5,9.9,35.8,10.5,35,10.5z"
+                                        />
+                                </g>
+                                <g>
+                                    <path fill="#FFAA3A" d="M16.6,18.1c-0.4,0-0.8-0.1-1.1-0.4l-5.3-5.3c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l5.3,5.3
+                                        c0.6,0.6,0.6,1.5,0,2.1C17.4,18,17,18.1,16.6,18.1z"/>
+                                </g>
+                                <g>
+                                    <path fill="#FFAA3A" d="M9,36.5H1.5C0.7,36.5,0,35.8,0,35s0.7-1.5,1.5-1.5H9c0.8,0,1.5,0.7,1.5,1.5S9.9,36.5,9,36.5z"/>
+                                </g>
+                                <g>
+                                    <path fill="#FFAA3A" d="M11.3,60.2c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l5.3-5.3c0.6-0.6,1.5-0.6,2.1,0s0.6,1.5,0,2.1
+                                        l-5.3,5.3C12.1,60,11.7,60.2,11.3,60.2z"/>
+                                </g>
+                                <g>
+                                    <path fill="#FFAA3A" d="M35,70c-0.8,0-1.5-0.7-1.5-1.5V61c0-0.8,0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5v7.5C36.5,69.3,35.8,70,35,70z"/>
+                                </g>
+                                <g>
+                                    <path fill="#FFAA3A" d="M58.7,60.2c-0.4,0-0.8-0.1-1.1-0.4l-5.3-5.3c-0.6-0.6-0.6-1.5,0-2.1s1.5-0.6,2.1,0l5.3,5.3
+                                        c0.6,0.6,0.6,1.5,0,2.1C59.5,60,59.1,60.2,58.7,60.2z"/>
+                                </g>
+                                <g>
+                                    <path fill="#FFAA3A" d="M68.5,36.5H61c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h7.5c0.8,0,1.5,0.7,1.5,1.5S69.3,36.5,68.5,36.5z"/>
+                                </g>
+                                <g>
+                                    <path fill="#FFAA3A" d="M53.4,18.1c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l5.3-5.3c0.6-0.6,1.5-0.6,2.1,0s0.6,1.5,0,2.1
+                                        l-5.3,5.3C54.1,18,53.7,18.1,53.4,18.1z"/>
+                                </g>
+                            </svg>
 
-<div class="row time">
-    <h2 id="ctime"></h2>
-</div>
+                        </div>
+                        <div class="hidden" class="icon_on">
+                            <svg version="1.1" id="icon_on" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+                                <g>
+                                    <path fill="#FFAA3A" d="M35,17.9c9.5,0,17.1,7.7,17.1,17.1c0,9.5-7.7,17.1-17.1,17.1c-9.5,0-17.1-7.7-17.1-17.1
+                                        C17.9,25.5,25.5,17.9,35,17.9 M35,14.9c-11.1,0-20.1,9-20.1,20.1s9,20.1,20.1,20.1s20.1-9,20.1-20.1S46.1,14.9,35,14.9L35,14.9z"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>  
+                </div>
+                <div class="ellipse">
+                </div>
+            </div>
 
-<div class="row control">
-    
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-primary" id="btn-on">ON</button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-warning" id="btn-flux">FLUX</button>
-      </div>
-      <div class="btn-group" role="group">
-        <button type="button" class="btn btn-info" id="btn-off">OFF</button>
-      </div>
+        </main>
     </div>
-
-</div>
-
 <script type="text/javascript">
-    $('document').ready(function(){
-                var hjs = HueJS({
-                    ipAddress:"192.168.0.108",
-                    devicetype:"test2",
-                    username: "effyzhang1"
-                });
+    $(document).ready(function(){
+        $('#btn_flux').click(function(){
+            $('.circle').animate({
+                'marginTop':"-=310px"
+            },300);
 
+            $('.icon_flux').animate({
+                'marginTop':"-=35px"
+            },300);
 
-    $('h1').click(function(e){
-        e.preventDefault();
-        hjs.authenticate( function(f){
-            alert("Successfully Authenticated");
-            // $('body').append(JSON.stringify(hjs.getCache()));
-            // console.log(hjs.getCache());
-        },
-        function(f){
-            alert("Error connecting to Hue");
-            console.log(f);
+            $('.icon_off').animate({
+                'marginTop':"+=35px"
+            },300);
+
+            $('.icon_flux').setAttribute(
+                'viewBox', '0 0 70 70' 
+            );
         });
+
+
+
     });
-    
-    $('#btn-on').click(function(e){
-        e.preventDefault();
-        hjs.turnOn([1,2]);
-    });
-    
-    $('#btn-off').click(function(e){
-        e.preventDefault();
-        hjs.turnOff([1,2]);
-    }); 
-   
-           
-    
-}); 
+</script>
 
-    
-
-window.onload = GetTime('ctime');
-window.onload = Flux();
-
-</script> 
 </body>
-</html> 
+</html>

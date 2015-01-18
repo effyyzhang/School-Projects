@@ -1,26 +1,219 @@
-
-
 body{
-	width: 600px;
-	margin-left: -300px;
-	margin-top: 100px;
-	left:50%;
-	top:50%;
+	margin:0;
+	padding: 0;
+}
+
+
+
+.screen{
+	width: 750px;
+	height: 1335px;
+	position: fixed;
+	left: 50%;
+	right:50%;
+	margin-left: -375px;
+	margin-top: 0px;
+	background-image: 
+		linear-gradient(
+		#383d87,#272b5f
+		);
+}
+
+.gradient{
+
+}
+
+h1,h2,h3,img{
+	margin:0;
+}
+
+h1{
+	font-size: 34pt;
+	font-family: Brandon Grotesque;
+	font-weight: 400;
+	line-height: 42px;
+	position: absolute;
+	top: 35px;
+	left:30px;
+}
+
+a{
+	font-size: 34pt;
+	font-family: Brandon Grotesque;
+	font-weight: 400;
+	line-height: 34pt;
+
+}
+
+
+.status{
+	width: 750px;
+	height: 34pt;
+	position:fixed;
+	top:0px;
+	color: #fff;	
+}
+
+h3{
+	font-size: 24pt;
+	font-family:Helvetica Neue;
+	font-weight: 400;
+	line-height: 27pt;
+}
+
+.time{
+	width: 100%;
+	text-align:center;
+	z-index: 10;
+	top: 10px;
+	position: absolute;
+
+}
+.status_bar{
+	width: 100%;
+	top: 0px;
+	position: absolute;
+	fill:#fff;
+}
+
+nav{
+	height: 100px;
 	position: relative;
+	margin-top: 45px;s
+	padding:0;
+	color: #1d204b;
+}
 
+.menu_icon{
+	width: 35px;
+	position: absolute;
+	top:42px;
+	right: 30px;
+	fill:#1d204b;
 }
 
 
-.main{
-	text-align: center;	
+
+.switch{
+	width: 200px;
+	height: 510px;
+	position: fixed;
+	left:50%;
+	top:432px;
+	margin-left: -100px;
+}
+
+.left{
+	background-color: yellow;
+	width: 142px;
+	height: 1000px;
+	position: relative;
+	margin-left: 0px;
+	visibility: hidden;
 
 }
 
-h2{
-	text-align: center;
-	color: rgb(240,173,78);
+button{
+	background-color: transparent;
+	border-radius:100px;
+	border-color: transparent;
+	display: block;
+	width: 200px;
+	height: 200px;
+	color: #fff;
+	font:28pt Brandon Grotesque,sans-serif;
+	cursor: pointer;
+
 }
 
-.btn-group{
-	margin-top: 40px;
+#btn_on{
+	position: absolute;
+	top: 0px;
+	z-index: 10;
+
+	}
+
+#btn_flux{
+	position: absolute;
+	top:0;
+	z-index: 10;
+
+	}	
+
+#btn_off{
+	position:absolute;
+	top:310px;
+	z-index: 10;
+}
+
+
+
+.icons{
+	width: 70px;	
+	display: block;
+	position: absolute;
+	top:55px;
+	left:55px;
+}
+
+.icon_flux{
+	width: 70px;
+	height: 70px;
+	z-index: 16;
+	position: absolute;
+	top: 35px;
+	z-index: 20;
+   
+}
+
+
+.icon_on{
+	width: 70px;
+	height: 70px;
+	z-index: 16;
+	position: absolute;
+	top:0px;
+	z-index: 18;
+
+}
+
+.icon_off{
+	width: 70px;
+	height: 70px;
+	z-index: 16;
+	position: absolute;
+	top: 0px;
+	fill:#1d204b;
+	
+}
+
+.circle{
+	width: 180px;
+	height: 180px;
+    border-radius: 90px;
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    position:relative;
+    display: block;
+    margin-top: 320px;
+    margin-left: 10px;
+
+
+}
+
+.ellipse{
+	width: 200px;
+	height: 510px;
+	border-radius: 100px;
+	box-sizing:border-box;
+	border:3px solid #fff;
+	background-color: rgba(255,255,255,0.2);
+	position: fixed;
+	top:432px;
+	z-index: -10;
+}
+
+.hidden{
+	visibility: hidden;
 }
