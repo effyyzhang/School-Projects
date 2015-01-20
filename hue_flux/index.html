@@ -14,6 +14,7 @@
     <script src="js/jquery.animate-colors-min.js"></script>
 
     <div class="screen" class="gradient">
+    <img src="img/bg.jpg" alt="bg" id="background">
     	<div class="status" >
         <div class="status_bar">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -48,10 +49,10 @@
             </svg>
         </div>
 <!--     		<img src="img/status_bar.svg" alt="status">
- -->            <div class="time"><h3>12:00PM</h3></div> 
+ -->            <div id="time"><h3>12:00PM</h3></div> 
     	</div>
     	<nav>
-            <h1>F.lux the Hue</h1>
+            <h1>Hue.Lumi</h1>
             <div class="menu_icon">
                 <svg version="1.1" id="icon1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
@@ -79,62 +80,64 @@
                 <img src="control_bar.png" alt="schedule" >
             </div>
             <div class="switch" >
-            <button type="button" id="btn_on" class="hidden" >ON</button>
-            <button type="button" id="btn_flux" class="visible" >F.LUX</button>
+            <button type="button" id="btn_on"></button>
+            <button type="button" id="btn_flux2"></button>
+            <button type="button" id="btn_flux" >LUMI</button>
             <button type="button" id="btn_off" >OFF</button>
                 <div class="circle">
                     <div class="icons">
                         <div class="icon_off">
-                            <svg version="1.1" id="icon_off" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
+                        <div id="test"></div>
+<!--                             <svg version="1.1" id="icon_off" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
                                 <g>
                                     <path fill="#FFAA3A" d="M53.5,36.4h-37c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h37c0.8,0,1.5,0.7,1.5,1.5S54.3,36.4,53.5,36.4z"/>
                                 </g>
-                            </svg>                            
+                            </svg>  -->                           
                         </div>
                         <div class="icon_flux">
                             <svg version="1.1" id="icon_flux" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
                                 <g>
-                                    <path fill="#FFAA3A" d="M35,17.9c9.5,0,17.1,7.7,17.1,17.1c0,9.5-7.7,17.1-17.1,17.1c-9.5,0-17.1-7.7-17.1-17.1
+                                    <path d="M35,17.9c9.5,0,17.1,7.7,17.1,17.1c0,9.5-7.7,17.1-17.1,17.1c-9.5,0-17.1-7.7-17.1-17.1
                                         C17.9,25.5,25.5,17.9,35,17.9 M35,14.9c-11.1,0-20.1,9-20.1,20.1s9,20.1,20.1,20.1s20.1-9,20.1-20.1S46.1,14.9,35,14.9L35,14.9z"/>
                                 </g>
                                 <g>
-                                    <path fill="#FFAA3A" d="M35,10.5c-0.8,0-1.5-0.7-1.5-1.5V1.5C33.5,0.7,34.2,0,35,0s1.5,0.7,1.5,1.5V9C36.5,9.9,35.8,10.5,35,10.5z"
+                                    <path d="M35,10.5c-0.8,0-1.5-0.7-1.5-1.5V1.5C33.5,0.7,34.2,0,35,0s1.5,0.7,1.5,1.5V9C36.5,9.9,35.8,10.5,35,10.5z"
                                         />
                                 </g>
                                 <g>
-                                    <path fill="#FFAA3A" d="M16.6,18.1c-0.4,0-0.8-0.1-1.1-0.4l-5.3-5.3c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l5.3,5.3
+                                    <path d="M16.6,18.1c-0.4,0-0.8-0.1-1.1-0.4l-5.3-5.3c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l5.3,5.3
                                         c0.6,0.6,0.6,1.5,0,2.1C17.4,18,17,18.1,16.6,18.1z"/>
                                 </g>
                                 <g>
-                                    <path fill="#FFAA3A" d="M9,36.5H1.5C0.7,36.5,0,35.8,0,35s0.7-1.5,1.5-1.5H9c0.8,0,1.5,0.7,1.5,1.5S9.9,36.5,9,36.5z"/>
+                                    <path d="M9,36.5H1.5C0.7,36.5,0,35.8,0,35s0.7-1.5,1.5-1.5H9c0.8,0,1.5,0.7,1.5,1.5S9.9,36.5,9,36.5z"/>
                                 </g>
                                 <g>
-                                    <path fill="#FFAA3A" d="M11.3,60.2c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l5.3-5.3c0.6-0.6,1.5-0.6,2.1,0s0.6,1.5,0,2.1
+                                    <path d="M11.3,60.2c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l5.3-5.3c0.6-0.6,1.5-0.6,2.1,0s0.6,1.5,0,2.1
                                         l-5.3,5.3C12.1,60,11.7,60.2,11.3,60.2z"/>
                                 </g>
                                 <g>
-                                    <path fill="#FFAA3A" d="M35,70c-0.8,0-1.5-0.7-1.5-1.5V61c0-0.8,0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5v7.5C36.5,69.3,35.8,70,35,70z"/>
+                                    <path d="M35,70c-0.8,0-1.5-0.7-1.5-1.5V61c0-0.8,0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5v7.5C36.5,69.3,35.8,70,35,70z"/>
                                 </g>
                                 <g>
-                                    <path fill="#FFAA3A" d="M58.7,60.2c-0.4,0-0.8-0.1-1.1-0.4l-5.3-5.3c-0.6-0.6-0.6-1.5,0-2.1s1.5-0.6,2.1,0l5.3,5.3
+                                    <path d="M58.7,60.2c-0.4,0-0.8-0.1-1.1-0.4l-5.3-5.3c-0.6-0.6-0.6-1.5,0-2.1s1.5-0.6,2.1,0l5.3,5.3
                                         c0.6,0.6,0.6,1.5,0,2.1C59.5,60,59.1,60.2,58.7,60.2z"/>
                                 </g>
                                 <g>
-                                    <path fill="#FFAA3A" d="M68.5,36.5H61c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h7.5c0.8,0,1.5,0.7,1.5,1.5S69.3,36.5,68.5,36.5z"/>
+                                    <path d="M68.5,36.5H61c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5h7.5c0.8,0,1.5,0.7,1.5,1.5S69.3,36.5,68.5,36.5z"/>
                                 </g>
                                 <g>
-                                    <path fill="#FFAA3A" d="M53.4,18.1c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l5.3-5.3c0.6-0.6,1.5-0.6,2.1,0s0.6,1.5,0,2.1
+                                    <path d="M53.4,18.1c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l5.3-5.3c0.6-0.6,1.5-0.6,2.1,0s0.6,1.5,0,2.1
                                         l-5.3,5.3C54.1,18,53.7,18.1,53.4,18.1z"/>
                                 </g>
                             </svg>
 
                         </div>
-                        <div class="hidden" class="icon_on">
+                        <div class="icon_on">
                             <svg version="1.1" id="icon_on" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
                                 <g>
-                                    <path fill="#FFAA3A" d="M35,17.9c9.5,0,17.1,7.7,17.1,17.1c0,9.5-7.7,17.1-17.1,17.1c-9.5,0-17.1-7.7-17.1-17.1
+                                    <path d="M35,17.9c9.5,0,17.1,7.7,17.1,17.1c0,9.5-7.7,17.1-17.1,17.1c-9.5,0-17.1-7.7-17.1-17.1
                                         C17.9,25.5,25.5,17.9,35,17.9 M35,14.9c-11.1,0-20.1,9-20.1,20.1s9,20.1,20.1,20.1s20.1-9,20.1-20.1S46.1,14.9,35,14.9L35,14.9z"/>
                                 </g>
                             </svg>
@@ -149,34 +152,139 @@
     </div>
 <script type="text/javascript">
     $(document).ready(function(){
+            
+        var hjs = HueJS({
+            ipAddress:"192.168.0.108",
+            devicetype:"test2",
+            username: "effyzhang1"
+        });
+
+
+        $('h1').click(function(e){
+            e.preventDefault();
+           
+            hjs.authenticate( function(f){
+                alert("Successfully Authenticated");
+                // $('body').append(JSON.stringify(hjs.getCache()));
+                // console.log(hjs.getCache());
+            },
+            function(f){
+                alert("Error connecting to Hue");
+                console.log(f);
+            });
+        });
+
+
+        $('#btn-on').click(function(e){
+            e.preventDefault();
+            hjs.turnOn([1,2]);
+        });
+    
+        $('#btn-off').click(function(e){
+            e.preventDefault();
+            hjs.turnOff([1,2]);
+        }); 
+
+        $('#btn-flux').click(function(e){
+            e.preventDefault();
+            Flux();
+        }); 
+
+
         $('#btn_flux').click(function(){
 
             $(this).fadeOut('slow');
 
             $('#btn_off').fadeIn('slow');
+            $('#btn_on').fadeIn('slow');
             
             $('.circle').animate({
                 'marginTop':"-=310px"
-            },300,'easeInOutQuart');
+            },500,'easeInOutQuart');
 
-            $('.ellipse').animate({backgroundColor:'rgba(0, 0, 0, 0.2)'},300);
+            $('.ellipse').animate({backgroundColor:'rgba(0, 0, 0, 0.2)'},500);
 
-            $('.icon_flux').animate({
-                'marginTop':"-=35px"
-            },300);
-
-            $('.icon_off').animate({
+            $('.icons').animate({
                 'marginTop':"+=35px"
-            },300);
+            },500);
 
-            // $('#icon_flux')[0].setAttribute(
-            //     'viewBox', '0 0 70 70' 
-            // );
+            $('.icon_on').animate({
+                'marginTop':"-=35px"
+            },500);
+
+            $('.icon_flux').addClass('bigger');
+            $('#test').toggleClass('smaller');
+            $('.menu_icon').toggleClass('brighter');
+            $('nav').toggleClass('brighter');
+            
+            $('#background').delay(400).fadeToggle('slow','linear').toggleClass('moveup');
+
+        });
+
+        $('#btn_on').click(function(){
+            $(this).fadeOut('slow');
+            $('#btn_flux2').fadeIn('slow');
+            
+            $('#icon_flux').fadeOut('fast');
+            $('.icon_on').fadeIn('fast');
+
+            $('#background').fadeToggle('slow','linear');
+            $('.screen').animate({backgroundColor:'#ffe083'},400);
+
+        }); 
+
+        $('#btn_flux2').click(function(){
+            $(this).fadeOut('slow');
+            $('#btn_on').fadeIn('slow');
+            
+            $('#icon_flux').fadeIn('fast');
+            $('.icon_on').fadeOut('fast');
+            $('#background').fadeToggle('slow','linear');
+            
+
+        });   
+
+        $('#btn_off').click(function(){
+
+            $(this).fadeOut('slow');
+            
+            $('#btn_flux2').fadeOut('slow');
+            $('#btn_flux').fadeIn('slow');
+            
+            $('.icon_on').css('display','none');
+            $('#icon_flux').css('display','block');
+            
+            $('.circle').animate({
+                'marginTop':"+=310px"
+            },500,'easeInOutQuart');
+
+            $('.ellipse').animate({backgroundColor:'rgba(255, 255, 255, 0.2)'},500);
+
+            $('.icons').animate({
+                'marginTop':"-=35px"
+            },500);
+
+            $('.icon_on').animate({
+                'marginTop':"+=35px"
+            },500);
+
+            $('.icon_flux').toggleClass('bigger');
+            $('#test').toggleClass('smaller');
+            $('.menu_icon').removeClass('brighter');
+            $('nav').removeClass('brighter');
+            
+            $('#background').delay(400).fadeOut('slow','linear').toggleClass('moveup');
+            $('.screen').animate({backgroundColor:'#1d204b'},400);
+
+            
+
         });
 
 
 
     });
+
+window.onload = GetTime('time');
 </script>
 
 </body>

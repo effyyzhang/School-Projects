@@ -12,12 +12,12 @@ function GetTime(id)
 		{
 		    m = "0"+m;
 		}
-	s = date.getSeconds();
-	if(s<10)
-		{
-		    s = "0"+s;
-		}
-	result = +h+':'+m+':'+s;
+	// s = date.getSeconds();
+	// if(s<10)
+	// 	{
+	// 	    s = "0"+s;
+	// 	}
+	result = +h+':'+m;
 
 	document.getElementById(id).innerHTML = result;
 	setTimeout('GetTime("'+id+'");','1000');

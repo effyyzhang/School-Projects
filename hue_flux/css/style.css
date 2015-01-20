@@ -13,14 +13,25 @@ body{
 	right:50%;
 	margin-left: -375px;
 	margin-top: 0px;
-	background-image: 
+	overflow: hidden;
+	background-color:#1d204b; 
+/*	background: 
 		linear-gradient(
 		#383d87,#272b5f
-		);
+		);*/
 }
 
-.gradient{
+#background{
+	margin-top: -800px;
+	margin-left: 0;
+	z-index: -50;
+	position: absolute;
+	display:none;
+	transition:margin-top 400ms ease-in-out;;
+}
 
+#background.moveup{
+	margin-top: -100px;
 }
 
 h1,h2,h3,img{
@@ -54,21 +65,20 @@ a{
 	color: #fff;	
 }
 
-h3{
-	font-size: 24pt;
-	font-family:Helvetica Neue;
-	font-weight: 400;
-	line-height: 27pt;
-}
 
-.time{
+#time{
 	width: 100%;
 	text-align:center;
 	z-index: 10;
 	top: 10px;
 	position: absolute;
 
+	font-size: 24pt;
+	font-family:Helvetica Neue;
+	font-weight: 400;
+	line-height: 27pt;
 }
+
 .status_bar{
 	width: 100%;
 	top: 0px;
@@ -81,7 +91,12 @@ nav{
 	position: relative;
 	margin-top: 45px;s
 	padding:0;
-	color: #1d204b;
+	color: #484e9b;
+	transition:color 400ms ease-in-out;
+}
+
+nav.brighter{
+	color:#ffaa3a;
 }
 
 .menu_icon{
@@ -89,9 +104,13 @@ nav{
 	position: absolute;
 	top:42px;
 	right: 30px;
-	fill:#1d204b;
-}
+	fill:#484e9b;
+	transition:fill 400ms ease-in-out;
 
+}
+.menu_icon.brighter{
+	fill:#ffaa3a;
+}
 
 
 .switch{
@@ -130,8 +149,19 @@ button{
 	position: absolute;
 	top: 0px;
 	z-index: 10;
+	display: none;
+
+
 
 	}
+
+#btn_flux2{
+	position: absolute;
+	top: 0px;
+	z-index: 10;
+	display: none;
+
+	}	
 
 #btn_flux{
 	position: absolute;
@@ -161,32 +191,57 @@ button{
 	width: 70px;
 	height: 70px;
 	z-index: 16;
-	position: absolute;
-	top: 35px;
+	position:absolute;
+	top:-35px;
 	z-index: 20;
-   
+	overflow: hidden;
+	display: block;
+	fill:#1d204b;
+
+
 }
 
+
+.icon_flux.bigger #icon_flux{
+	margin-top:0px;
+	fill:#ffaa3a;
+}
+
+
+#icon_flux{
+	display:block;
+	position:absolute;
+	margin-top:70px;
+	box-shadow: 0px 3px 1px 1px #fff;	
+	transition:margin-top 400ms cubic-bezier(.62,.22,.54,.91) 100ms,
+	fill 400ms ease-in-out 100ms;
+}
 
 .icon_on{
 	width: 70px;
 	height: 70px;
 	z-index: 16;
-	position: absolute;
+	position:absolute;
 	top:0px;
 	z-index: 18;
-
+	fill:#ffe083;
+	display: none;	
 }
 
-.icon_off{
-	width: 70px;
-	height: 70px;
-	z-index: 16;
-	position: absolute;
-	top: 0px;
-	fill:#1d204b;
-	
+#test{
+	width: 40px;
+	height: 34px;
+	border-bottom:3px solid;
+	border-color:#1d204b;
+	margin:0px auto 35px auto;
+	transition:width 200ms ease-in-out 300ms,border-color 200ms ease-in-out 300ms;		
 }
+
+#test.smaller{
+	width:0px;
+	border-color:#ffaa3a;
+}
+
 
 .circle{
 	width: 180px;
@@ -202,6 +257,7 @@ button{
 
 
 }
+
 
 .ellipse{
 	width: 200px;
