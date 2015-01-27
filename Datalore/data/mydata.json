@@ -1,0 +1,14 @@
+[
+  {source: {x: 0, y0: 0.9, y1: 1.0}, target: {x: 1, y0: 0.5, y1: 1.0}, group:  0},
+  {source: {x: 0, y0: 0.7, y1: 0.9}, target: {x: 1, y0: 0.4, y1: 0.5}, group:  1},
+  {source: {x: 0, y0: 0.4, y1: 0.7}, target: {x: 1, y0: 0.2, y1: 0.4}, group:  2},
+  {source: {x: 0, y0: 0.0, y1: 0.4}, target: {x: 1, y0: 0.0, y1: 0.2}, group:  3},
+  {source: {x: 1, y0: 0.8, y1: 1.0}, target: {x: 2, y0: 0.5, y1: 1.0}, group:  4},
+  {source: {x: 1, y0: 0.5, y1: 0.8}, target: {x: 2, y0: 0.2, y1: 0.5}, group:  5},
+  {source: {x: 1, y0: 0.3, y1: 0.5}, target: {x: 2, y0: 0.1, y1: 0.2}, group:  6},
+  {source: {x: 1, y0: 0.0, y1: 0.3}, target: {x: 2, y0: 0.0, y1: 0.1}, group:  7},
+  {source: {x: 2, y0: 0.8, y1: 1.0}, target: {x: 0, y0: 0.5, y1: 1.0}, group:  8},
+  {source: {x: 2, y0: 0.5, y1: 0.8}, target: {x: 0, y0: 0.2, y1: 0.5}, group:  9},
+  {source: {x: 2, y0: 0.1, y1: 0.5}, target: {x: 0, y0: 0.1, y1: 0.2}, group: 10},
+  {source: {x: 2, y0: 0.0, y1: 0.1}, target: {x: 0, y0: 0.0, y1: 0.1}, group: 11}
+];

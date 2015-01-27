@@ -1,0 +1,554 @@
+/*!
+ * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+@font-face{
+    font-family: 'DINpro';
+    src:url('../font/DINPro-Light.otf')format('otf'),
+           ('../font/DINPro-Black.otf')format('otf'),
+           ('../font/DINPro-Bold.otf')format('otf'),
+           ('../font/DINPro-Medium.otf')format('otf'),
+           ('../font/DINPro-Regular.otf')format('otf'),
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: DINpro,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+    background-color: #032139;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/*-----------------font--------------------*/
+h1,h2,h3,h4,h5,h6 {
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    font-family: DINpro,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 300;
+    color:#ebe812;
+
+}
+
+h3{
+    font-size: 24px;
+    line-height: 60px;
+    border-bottom:1px solid #fff;
+
+}
+
+p {
+    margin: 0 0 25px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family:font-family: DINpro,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.5;
+    text-align: left;
+}
+
+#about p{
+    text-align: center;
+}
+
+.navbar-brand span{
+    margin: 0 0 25px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #fff;
+    opacity: 0.8;
+}
+
+
+@media(min-width:767px) {
+    p {
+        margin: 0 0 35px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+a {
+    color: #219ab3;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #11505d;
+}
+
+.light {
+    font-weight: 400;
+}
+
+.navbar-custom {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-family: DINpro,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 120px;
+    border-bottom: 1px solid #fff !important;
+    background-color: rgba(0,0,0,0.2)!important;
+
+}
+
+.navbar-custom .navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle {
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand .navbar-toggle:focus,
+.navbar-custom .navbar-brand .navbar-toggle:active {
+    outline: 0;
+}
+
+.navbar-custom a {
+    color: #fff;
+}
+
+.navbar-custom .nav li.active {
+    outline: nonte;
+    background-color: rgba(255,255,255,.3);
+}
+
+.navbar-custom .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a.active {
+    outline: 0;
+    background-color: rgba(255,255,255,.3);
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background-color: #000;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        border-bottom: 1px solid #fff;
+    }
+}
+
+
+.btn-circle {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 2px solid #fff;
+    border-radius: 35px;
+    font-size: 40px;
+    color: #fff;
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+/*.btn-circle:hover,
+.btn-circle:focus {
+    outline: 0;
+    color: #fff;
+    background: rgba(255,255,255,.1);
+}
+
+.btn-circle i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+}
+
+.btn-circle:hover i.animated {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+*/
+@-webkit-keyframes pulse {    
+    0 {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes pulse {    
+    0 {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    50% {
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.content-section {
+    padding-top: 100px;
+}
+
+.download-section {
+    width: 100%;
+    padding: 50px 0;
+    color: #fff;
+    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#map {
+    width: 100%;
+    height: 200px;
+    margin-top: 100px;
+}
+
+    .download-section {
+        padding: 100px 0;
+    }
+
+    #map {
+        height: 400px;
+        margin-top: 250px;
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.btn-default {
+    border: 1px solid #219ab3;
+    color: #219ab3;
+    background-color: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    border: 1px solid #219ab3;
+    outline: 0;
+    color: #000;
+    background-color: #219ab3;
+}
+
+ul.banner-social-buttons {
+    margin-top: 0;
+}
+
+/*@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    ul.banner-social-buttons li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons li:last-child {
+        margin-bottom: 0;
+    }
+}*/
+
+footer {
+    padding: 50px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+::selection {
+    text-shadow: none;
+    background: #fcfcfc;
+    background: rgba(255,255,255,.2);
+}
+
+img::selection {
+    background: 0 0;
+}
+
+img::-moz-selection {
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: rgba(255,255,255,.2);
+}
+
+.link {
+  fill: none;
+  
+}
+
+.axis{
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+.node{
+	stroke:none;
+
+}
+
+/*-----------------sections Our team--------------------*/
+.members{
+    width: 100%;
+    height: 200px;
+    display: block;
+    margin-bottom: 60px;
+}
+.members ul{
+    list-style: none;
+    margin: 0;
+}
+
+.members li{
+    position: relative;
+    display: inline-block;
+    border-radius: 70px;
+    border:4px solid #fff;
+    width: 140px;
+    height: 140px;
+
+    margin-left: 20px;
+    text-align: center;
+    font-family: DINpro,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
+
+}
+
+.members a span{
+    width: 140px;
+    display: block;
+    position: absolute;
+    top: 160px;
+    left:50%;
+    margin-left: -70px;
+    color: #fff;
+    font-family: DINpro,"Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    font-size: 16px;
+
+
+}
+
+
+/*-----------------sections Intro--------------------*/
+
+.fact{
+    padding-top: 40px;
+    margin:30px auto 50px auto;
+    width: 200px;
+    display: block;
+    border-radius:100px;
+    border:1px solid #fff;
+    height: 200px;
+}
+.fact p{
+    margin:15px;
+}
+
+.story{
+    padding-top: 10px;
+    margin:30px auto 50px auto;
+    display: block;
+}
+
+.story p{
+    margin:0px;
+    font-weight: 600px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+p span{
+    margin-top:10px;
+    text-transform: uppercase;
+    font-family:  DINpro, Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 54px;
+    line-height: 60px;
+    letter-spacing: 1px;
+    color:#ebe812;
+}
+
+#about,#about2{
+    padding-top: 60px; 
+    padding-bottom: 40px;
+    border-bottom: 1px solid #fff;
+}
+
+.pink{  
+    color:#ec50b7;
+}
+
+/*-----------------sections Charts--------------------*/
+.chart-section{
+/*    border-top: 1px solid #fff;*/
+    color: #fff;
+    opacity: 1;
+
+
+}
+
+/*-----------------sections Chart1--------------------*/
+#chart_1{
+    
+    width:800px;
+    display: block;
+    margin: 40px auto;
+}
+
+#chart_1_info{
+    border-top: 1px solid #fff;
+    width: 300px;
+    padding: 15 0;
+    position: absolute;
+    opacity: 0;
+    margin-top: 40px;
+    font-weight: 300;
+    letter-spacing: 
+}
+
+/*-----------------sections Chart2--------------------*/
+#chart_2{
+    margin-top: 40px;
+    width:800px;
+    display: block;
+    margin: 40px auto;
+}
+
+/*-----------------sections Chart3--------------------*/
+#chart_3{
+    width:800px;
+    height:600px;
+    background-repeat: no-repeat;
+    display: block;
+    background-image:url("../img/nih_funding_scatterplot.png");    
+    margin: 40px auto;
+    -webkit-background-size:1000px  ;
+    background-size:800px 600px;
+}
+#graph1,#graph2,#graph3,#graph4, #section3{
+    margin-top: 60px;
+    border-bottom: 1px solid #fff;
+
+}
+
+#graph4{
+    padding-bottom: 200px;
+}
+
+/*-----------------sections3--------------------*/
+#data_entry{
+    width:100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    display: block;
+    background-image:url("../img/dspace_input_page.png"); 
+    background-size:555px;   
+    margin: 0 auto;
+}
+
+#data_white_board{
+    width:550px;
+    height: 400px;
+    background-repeat: no-repeat;
+    display: block;
+    background-image:url("../img/Data_white_board.jpg");
+    background-size:550px;     
+    margin: 0 auto;
+}
+#Excel{
+    width:550px;
+    height: 400px;
+    background-repeat: no-repeat;
+    display: block;
+    background-image:url("../img/spreadsheet.png");    
+    margin: 0 auto;
+    background-size:550px;  
+}
+#space2, #space3{
+    margin:40 auto;
+}
+
+footer{
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
