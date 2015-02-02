@@ -172,7 +172,7 @@
         });
 
 
-        $('#btn-on').click(function(e){
+        /*$('#btn-on').click(function(e){
             e.preventDefault();
             hjs.turnOn([1,2]);
         });
@@ -185,7 +185,7 @@
         $('#btn-flux').click(function(e){
             e.preventDefault();
             Flux();
-        }); 
+        }); */
 
 
         $('#btn_flux').click(function(){
@@ -217,8 +217,8 @@
             
             $('#background').delay(400).fadeToggle('slow','linear').toggleClass('moveup').css('transition','none');
             
-            $('.left').delay(800).fadeIn('slow','linear').delay(400);
-            $('.left img ,#background').delay(1200).animate({'marginTop':"-=840px"},100000,'linear');
+            /*$('.left').delay(800).fadeIn('slow','linear').delay(400);
+            $('.left img ,#background').delay(1200).animate({'marginTop':"-=840px"},100000,'linear');*/
 
             hjs.turnOn([1,2]);
             Flux();
@@ -227,7 +227,7 @@
         
         $('#btn_on').click(function(){
             
-            $('.left img ,#background').stop();
+            /*$('.left img ,#background').stop();*/
 
             $(this).fadeOut('slow');
             $('#btn_flux2').fadeIn('slow');
@@ -237,13 +237,14 @@
 
             $('#background').fadeToggle('slow','linear');
             $('.screen').animate({backgroundColor:'#ffe083'},400);
-            $('.left').delay(200).fadeOut('slow','linear');
+            /*$('.left').delay(200).fadeOut('slow','linear');*/
+            hjs.setHueSat([1,2],1500,255);
 
         }); 
 
         $('#btn_flux2').click(function(){
 
-            $('.left img ,#background').delay(1200).animate({'marginTop':"-=840px"},100000,'linear');
+            /*$('.left img ,#background').delay(1200).animate({'marginTop':"-=840px"},100000,'linear');*/
             
             $(this).fadeOut('slow');
             $('#btn_on').fadeIn('slow');
@@ -251,13 +252,14 @@
             $('#icon_flux').fadeIn('fast');
             $('.icon_on').fadeOut('fast');
             $('#background').fadeToggle('slow','linear');
-            $('.left').delay(200).fadeIn('slow','linear');
+            /*$('.left').delay(200).fadeIn('slow','linear');*/
+            Flux();
             
 
         });   
 
         $('#btn_off').click(function(){
-            $('.left img ,#background').stop();
+           /* $('.left img ,#background').stop();*/
 
 
             $(this).fadeOut('slow');
@@ -289,9 +291,9 @@
             
             $('#background').delay(400).fadeOut('slow','linear').toggleClass('moveup');
             $('.screen').animate({backgroundColor:'#1d204b'},400);
-            $('.left').delay(200).fadeOut('slow','linear'); 
+            /*$('.left').delay(200).fadeOut('slow','linear'); 
 
-            $('.left img ,#background').stop();
+            $('.left img ,#background').stop();*/
 
             hjs.turnOff([1,2]);
 
@@ -300,7 +302,7 @@
     });
 
 
-window.onload = GetTime('');
+window.onload = GetTime('#time');
 </script>
 
 </body>
